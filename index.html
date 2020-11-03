@@ -1,5 +1,5 @@
 <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>New Portfolio</title>
     <link rel="stylesheet" href="css.css">
     <link rel="shortcut icon" href="#">
@@ -14,11 +14,12 @@
             <h3>Front End Developer</h3>
         </header>
         <section>
-            <div>Holds img</div>
+            <img src="/assets/imgs/12 Apostles Australia.JPG" alt="">
+            <div class="img__overlay"></div>
             <nav>
                 <ul>
-                    <li @click="call__projects">Projects</li>
                     <li>About Me</li>
+                    <li @click="call__projects">Projects</li>
                     <li>Certifications</li>
                     <li>Contact</li>
                 </ul>
@@ -26,18 +27,22 @@
         </section>
         <div class="comp__container">
             <div class="projects">
-                <div class="project__card">
-                    {{ thing }}
+                <div    v-for="project in projects" 
+                        :key="project.id"
+                        class="project__card">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.thumb }}</p>
+                    <p>{{ project.desc }}</p>
                 </div>
-                <div class="project__card">
-                    {{ thing }}
+                <!-- <div class="project__card card-b">
+                    <h3>{{ thing }}</h3>
                 </div>
-                <div class="project__card">
-                    {{ thing }}
+                <div class="project__card card-c">
+                    <h3>{{ thing }}</h3>
                 </div>
-                <div class="project__card">
-                    {{ thing }}
-                </div>
+                <div class="project__card card-d">
+                    <h3>{{ thing }}</h3>
+                </div> -->
             </div>
         </div>
     </div>
