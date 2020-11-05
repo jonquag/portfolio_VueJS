@@ -4,55 +4,50 @@
     <link rel="stylesheet" href="css.css">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-
     <div id="app" class="container">
         <header>
-            <h1>Jonathan Quagliariello</h1>
-            <h3>Front End Developer</h3>
-        </header>
-        <section>
-            <img src="/assets/imgs/12 Apostles Australia.JPG" alt="">
-            <div class="img__overlay"></div>
-            <nav>
-                <ul>
-                    <li>About Me</li>
-                    <li @click="call__projects">Projects</li>
-                    <li>Certifications</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </section>
-        <div class="comp__container">
-            <div class="projects">
-                <div    v-for="project in projects" 
-                        :key="project.id"
-                        class="project__card">
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.thumb }}</p>
-                    <p>{{ project.desc }}</p>
-                </div>
-                <!-- <div class="project__card card-b">
-                    <h3>{{ thing }}</h3>
-                </div>
-                <div class="project__card card-c">
-                    <h3>{{ thing }}</h3>
-                </div>
-                <div class="project__card card-d">
-                    <h3>{{ thing }}</h3>
-                </div> -->
+            <div class="title">
+                <h1>Jonathan Quagliariello</h1>
+                <h3>Front End Developer</h3>
             </div>
+            <img src="/assets/imgs/Australia-apostles.jpg" alt="" class="hero">
+            <div class="img__overlay"></div>
+        </header>
+    
+        <nav>
+            <div></div>
+            <ul>
+                <li @click="navChange('about')">About Me</li>
+                <li @click="navChange('projects')">Projects</li>
+                <li @click="navChange('certs')">Certifications</li>
+                <li @click="navChange('contact')">Contact</li>
+            </ul>
+        </nav>
+        <div    id="dynamic__comp" 
+                class="comp__container">
+            <project-component v-if="activeDestination === 'projects'">
+            </project-component>
+            <about-component v-if="activeDestination === 'about'">
+            </about-component>
         </div>
     </div>
 
-
-    <script src="https://unpkg.com/vue@next"></script> 
+    
+    <!-- Import App -->
     <script src="./main.js"></script>
+    <!-- Import Components -->
+    <script src="./components/projects-component.js"></script>
+    <script src="./components/about-component.js"></script>
+    <!-- Mount App -->
     <script>
         const mountedApp = app.mount('#app')
     </script>
 </body>
 
 </html>
+
