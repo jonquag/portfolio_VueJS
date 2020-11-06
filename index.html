@@ -30,10 +30,19 @@
         </nav>
         <div    id="dynamic__comp" 
                 class="comp__container">
-            <project-component v-if="activeDestination === 'projects'">
+            <project-component 
+                v-if="activeDestination === 'projects'">
             </project-component>
-            <about-component v-if="activeDestination === 'about'">
+            <about-component 
+                v-if="activeDestination === 'about'">
             </about-component>
+            <cert-component
+                v-if="activeDestination === 'certs'">
+            </cert-component
+                v-if="activeDestination === 'contact'">
+            <contact-component>
+
+            </contact-component>   
         </div>
     </div>
 
@@ -43,6 +52,8 @@
     <!-- Import Components -->
     <script src="./components/projects-component.js"></script>
     <script src="./components/about-component.js"></script>
+    <script src="./components/cert-component.js"></script>
+    <script src="./components/contact-component.js"></script>
     <!-- Mount App -->
     <script>
         const mountedApp = app.mount('#app')
