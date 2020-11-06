@@ -148,5 +148,29 @@ li:active {
 .project__card h3 {
     padding: 5px 0;
 }
+
+/* Certification Component */
+
+.cert__grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+.cert__thumb {
+    height: 125px;
+    width: 100%;
+    grid-column: span 2;
+}
+
+/* Contact Component */
+
+.icon {
+    grid-column: span 2;
+    height: 100%;
+    width: 100%;
+}
+
 /* Media Queries */
 
