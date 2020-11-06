@@ -1,7 +1,7 @@
 app.component('project-component', {
     template:
     /*html*/
-    `<div   class="project__card"
+    `<div   class="project__card shadow"
             v-for="project in projects">
         <h3>{{ project.title }}</h3>
         <p>{{ project.thumb }}</p>
@@ -16,25 +16,25 @@ app.component('project-component', {
                     id: 001,
                     title: "Find Siggy",
                     thumb: "thumbnail",
-                    desc: "This is a description",
+                    desc: "Search pods to find Siggy.",
                 },
                 {
                     id: 002,
                     title: "Gallery 2.0",
                     thumb: "thumbnail",
-                    desc: "This is a description",
+                    desc: "Densely populated grid gallery",
                 },
                 {
                     id: 003,
                     title: "Color Changer",
                     thumb: "thumbnail",
-                    desc: "This is a description",
+                    desc: "First project manipulating DOM events",
                 },
                 {
                     id: 004,
                     title: "Recipe Book",
                     thumb: "thumbnail",
-                    desc: "This is a description",
+                    desc: "Currently being developed",
                 },
             ]
         }
