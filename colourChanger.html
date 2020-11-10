@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Background Colour Changer</title>
+  <link rel="stylesheet" href="style/colour.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html"><img class="home" src="assets/imgs/home-teal.svg" alt="Home button"></a>
+    </nav>
+    <h1>Colour Changer</h1>
+  </header>
+  <div class="card">
+    <h2>Card 1: Mouse Click</h2>
+    <p>Click the mouse over the box below to change the colour.</p>
+    <div id="background" class="visual"></div>
+  </div>
+  <div class="card">          
+    <h2>Card 2: Mouse Wheel</h2>
+    <p>Use the mouse wheel to change the colour of the box below.</p>
+    <div id="wheel" class="visual"></div>
+  </div>
+  <div class="card">
+    <h2>Card 3: Mouse Out</h2>
+    <p>The text below will change when the mouse has left its box.</p>
+    <div id="mouse-out" class="visual">Change me!</div>
+  </div>
+  <div id="reset-cards">Reset</div>
+  <script src="script/colour.js"></script>
+</body>
+
+</html>
+
+
+<!--
+<div class="container">
+  <header></header>
+  <div id="background">
+    <div class="text">CLICK ANYWHERE</div>
+  </div>
+  <footer></footer>
+</div>
+-->

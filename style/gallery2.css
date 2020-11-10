@@ -1,0 +1,129 @@
+/*  All purpose */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+body {
+    margin: 0em 10em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+    overflow: hidden;
+    width: 100%;
+    height: 1500px;
+}
+/* Header */
+.header {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+}
+h1 {
+    font-size: 42px;
+    text-align: center;
+    padding: 0.5em 0;
+    margin: .5em;
+    grid-column: 2/3;
+}
+
+/* Box span differentiation */
+.box.v2 {
+    grid-row: span 2 ;
+}
+.box.v3 {
+    grid-row: span 3 ;
+}
+.box.v4 {
+    grid-row: span 4 ;
+}
+.box.h2 {
+    grid-column: span 2 ;
+}
+.box.h3 {
+    grid-column: span 3 ;
+}
+.box.h4 {
+    grid-column: span 4 ;
+}
+
+.box {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+   
+}
+.box img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animated overlay */
+
+.img__overlay {
+    background: rgba(255, 136, 0, 0.5);
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    position: relative;
+    transition: 0.25s;
+    transform: translateY(-100%);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.box:hover .img__overlay {
+    transform: translateY(0%);
+}
+
+.img__overlay button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.6);
+    padding: 5px;
+}
+
+/* Full screen overlay */
+
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+.overlay.open {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.overlay-inner {
+    background: white;
+    width: 700px;
+    padding: 20px;
+}
+
+.overlay img {
+    width: 100%;
+}
+.close {
+    background: none;
+    color: black;
+    border: 0;
+    font-size: 14px;
+}

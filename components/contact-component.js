@@ -18,7 +18,7 @@ app.component('contact-component',{
         <img    src="./assets/imgs/github.svg" 
                 alt="Github icon"
                 class="icon__img"></a>
-        <div class="contact__blurb"> Please contact me via E-mail or LinkedIn for more information about my journey to learn front end development, or checkout my Github.
+        <div class="contact__blurb"> Please contact me via E-mail or LinkedIn for more information about my journey to learn front end development, or checkout my Github to see what I've been learning lately.
         </div>
         </div>
         
