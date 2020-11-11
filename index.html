@@ -24,10 +24,14 @@
         <nav>
             <div></div>
             <ul>
-                <li @click="navChange('about')">About Me</li>
-                <li @click="navChange('projects')">Projects</li>
-                <li @click="navChange('certs')">Certifications</li>
-                <li @click="navChange('contact')">Contact</li>
+                <li @click="navChange('about')"
+                    :class="{ active: activeDestination === 'about' }">About Me</li>
+                <li @click="navChange('projects')"
+                    :class="{ active: activeDestination === 'projects' }">Projects</li>
+                <li @click="navChange('certs')"
+                    :class="{ active: activeDestination === 'certs' }">Certifications</li>
+                <li @click="navChange('contact')"
+                    :class="{ active: activeDestination === 'contact' }">Contact</li>
             </ul>
         </nav>
         <div    id="dynamic__comp" 
