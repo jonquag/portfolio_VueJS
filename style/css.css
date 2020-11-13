@@ -379,7 +379,7 @@ button {
 
 @media only screen  and (min-width : 1224px) {
     html {
-        padding: 0 10%;
+        padding: 0 20%;
     }
     .container {
         grid-template-columns: repeat(12, 1fr);
