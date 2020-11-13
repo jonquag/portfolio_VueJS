@@ -312,6 +312,11 @@ button {
     background: var(--secondary-color);
     color: black;
 }
+.disabled {
+    background: lightgrey;
+    cursor: none;
+    pointer-events: none;
+}
 
 /* Media Queries */
 
